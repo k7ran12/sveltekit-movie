@@ -1,7 +1,7 @@
 <script context="module">
     export async function load({fetch,params}){
         const res = await fetch(                        
-            `https://api.themoviedb.org/3/search/movie?api_key=8b602b9bd07ee12f35f3ffa0beb7df98&language=en-US&query=${params.id}&include_adult=false`
+            `https://api.themoviedb.org/3/search/movie?api_key=${import.meta.env.VITE_API}&language=en-US&query=${params.id}&include_adult=false`
             );
             const data = await res.json();
             console.log(data);
